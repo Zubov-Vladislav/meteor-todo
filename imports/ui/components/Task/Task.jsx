@@ -32,7 +32,7 @@ const Task = ({ task, onCheckboxClick, onDeleteClick }) => (
 
 );
 
-Task.PropTypes = {
+Task.propTypes = {
   task: T.shape({
     _id: T.oneOfType([
       T.string,
