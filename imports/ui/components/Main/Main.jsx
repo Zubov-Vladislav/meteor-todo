@@ -83,7 +83,7 @@ const Main = () => {
       width='100%'
     >
       <nu-main
-        padding='1x 2x'
+        padding='1x 2x||1x .5x'
         gap
         width='10x 100% 80x'
       >

@@ -10,7 +10,7 @@ const initialUser = {
   password: ''
 }
 
-const TaskForm = () => {
+const Login = ({history}) => {
   const [ { username, password }, setUser ] = useState(initialUser)
   
   
@@ -21,9 +21,10 @@ const TaskForm = () => {
     } ))
   }
   
-  const submitHandler = () => {
+  const submitHandler = async () => {
     if (password && username) {
-      Meteor.loginWithPassword(username, password);
+      await Meteor.loginWithPassword(username, password);
+      history.push('/')
     }
   }
   
@@ -70,4 +71,4 @@ const TaskForm = () => {
   
   
 }
-export default TaskForm
+export default Login
